@@ -1,0 +1,31 @@
+<?php
+//定义系统常量
+define('ROOT_PATH', str_replace('includes/core/init.php', '', str_replace('\\', '/', __FILE__)));
+define('CONF',ROOT_PATH.'includes/conf');
+define('CORE',ROOT_PATH.'includes/core');
+define('LIBS',ROOT_PATH.'includes/libs');
+define('SMARTY_DIR',LIBS.'/smarty/');
+define('RESULT',CORE.'/result');
+define('LOG',CORE.'/log');
+include_once CORE.'/Config.php';
+include_once CORE.'/ConfLoader.php';
+include_once CORE.'/ClassLoader.php';
+include_once CORE.'/AbstractFactory.php';
+include_once CORE.'/ControllerFactory.php';
+include_once CORE.'/Url.php';
+include_once CORE.'/TemplateEngine.php';
+include_once SMARTY_DIR.'Smarty.class.php';
+include_once CORE.'/SmartyEngine.php';
+include_once CORE.'/ActionAppointer.php';
+include_once CORE.'/Controller.php';
+include_once CORE.'/exception/SherryException.php';
+include_once CORE.'/exception/CheckedException.php';
+include_once CORE.'/exception/SilentException.php';
+include_once CORE.'/exception/FileException.php';
+include_once CORE.'/Context.php';
+include_once CORE.'/ApplicationContext.php';
+include_once CORE.'/ControllerMap.php';
+include_once CORE.'/RequestContext.php';
+include_once CORE.'/ResponseContext.php';
+include_once RESULT.'/Result.php';
+include_once LOG.'/SherryLog.php';
